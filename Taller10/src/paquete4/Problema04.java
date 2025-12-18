@@ -6,6 +6,7 @@
 package paquete4;
 
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  *
@@ -19,6 +20,8 @@ public class Problema04 {
         int valorIngresado;
         int[][] matrizA = new int[3][2];
         int[][] matrizB = new int[3][2];
+        int mayor = 0;
+        int mayorIgual = 0;
         for (int i = 0; i < matrizA.length; i++) {
             for (int j = 0; j < matrizA[i].length; j++) {
                 System.out.printf("Ingrese valor para la posición de la primera matriz [%d][%d]\t:",
@@ -33,21 +36,43 @@ public class Problema04 {
                 System.out.printf("Ingrese valor para la posición de la segunda matriz [%d][%d]\t:",
                         i, j);
                 valorIngresado = entrada.nextInt();
-                matrizA[i][j] = valorIngresado;
+                matrizB[i][j] = valorIngresado;
             }
             System.out.println();
         }
+        System.out.println("MATRIZ A");
         for (int fila = 0; fila < matrizA.length; fila++) {
             for (int col = 0; col < matrizA[fila].length; col++) {
                 System.out.printf("%d\t", matrizA[fila][col]);
             }
             System.out.println("");
         }
+        System.out.println("");
+
+        System.out.println("MATRIZ B");
         for (int fila = 0; fila < matrizB.length; fila++) {
             for (int col = 0; col < matrizB[fila].length; col++) {
                 System.out.printf("%d\t", matrizB[fila][col]);
             }
             System.out.println("");
         }
+
+        for (int fila = 0; fila < 3; fila++) {
+            for (int col = 0; col < 2; col++) {
+                if (matrizA[fila][col] >= matrizB[fila][col]) {
+                    mayorIgual = mayorIgual + 1;
+                }
+                if (matrizA[fila][col] > matrizB[fila][col]) {
+                    mayor = mayor + 1;
+
+                }
+            }
+        }
+        if (mayorIgual > 0 && mayor > 0 ){
+            System.out.printf("La matriz A es mayor que la matriz B\n");
+        }else{
+            System.out.printf("La matriz A no es mayor que la matriz B\n");
+        }
+
     }
 }
