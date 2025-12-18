@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package paquete4;
-
+//
 import java.util.Scanner;
 import java.util.Set;
 
@@ -68,11 +68,12 @@ public class Problema04 {
                 }
             }
         }
-        if (mayorIgual > 0 && mayor > 0 ){
+        if (mayorIgual > 0 && mayor > 0) {
             System.out.printf("La matriz A es mayor que la matriz B\n");
-        }else{
+        } else {
             System.out.printf("La matriz A no es mayor que la matriz B\n");
         }
 
     }
+    
 }
