@@ -12,7 +12,8 @@ import java.util.Scanner;
  * @author reroes
  */
 public class Problema06 {
-        public static void main(String[] args) {
+
+    public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
         int valorIngresado;
@@ -57,16 +58,16 @@ public class Problema06 {
         }
 
         for (int fila = 0; fila < matrizA.length; fila++) {
-            
+
             for (int col = 0; col < matrizA[fila].length; col++) {
-                valor1 = matrizA[fila][col];                
+                valor1 = matrizA[fila][col];
                 valor2 = matrizB[fila][col];
                 matrizC[fila][col] = valor1 * valor2;
-                
+
             }
         }
 
-        System.out.println("MATRIZ PRODCUTO MATRIZ A Y B");
+        System.out.println("MATRIZ C productos elementos A y B");
         for (int fila = 0; fila < matrizC.length; fila++) {
             for (int col = 0; col < matrizC[fila].length; col++) {
                 System.out.printf("%d\t", matrizC[fila][col]);
@@ -74,9 +75,7 @@ public class Problema06 {
             System.out.println("");
         }
 
-
     }
-    
-}
 
+}
 
